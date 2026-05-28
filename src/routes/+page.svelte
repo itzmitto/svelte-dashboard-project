@@ -9,7 +9,7 @@
 
 <div class="layout">
   <aside class="sidebar">
-    <h2>Menu</h2>
+    <h2>Sidebar</h2>
 
     <nav>
       <ul>
@@ -22,6 +22,6 @@
 
   <main class="main">
     <h1>Welkom</h1>
-    <p>Dit is de main content van je website.</p>
+    <p>Dit is de main pagina van mijn website</p>
   </main>
 </div>
