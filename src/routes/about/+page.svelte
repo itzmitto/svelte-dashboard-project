@@ -4,7 +4,7 @@
     <a href="/">← Terug naar homeasddasdasdasdas</a>
   </div>
 </svelte>
-   
+   b   
 <style>
   :global(body) {
     background: #0f172a;
