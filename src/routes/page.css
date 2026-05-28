@@ -1,0 +1,27 @@
+:global(body) {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: rgb(255, 255, 255);
+}
+
+.page {
+    min-height: 100vh;
+    padding: 2rem;
+    background: #0f172a;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 1rem 4rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: rgb(3, 244, 192);
+}
+
+p {
+    color: rgb(3, 244, 192);
+}
