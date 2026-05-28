@@ -11,7 +11,7 @@
     <h1>hallo</h1>
     <p>Welkom op mijn nieuwe SvelteKit website</p>
 
-    <div class="buttons">
+    <div class="buttons"> 
       <a href="/about" class="primary">Meer info</a>
       <a href="/contact" class="secondary">Contact</a>
     </div>
