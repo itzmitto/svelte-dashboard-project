@@ -1,7 +1,7 @@
 <svelte>
   <h1>hallo dit is de about pagina</h1>
   <div>
-    <a href="/">← Terug naar home</a>
+    <a href="/">← Terug naar homeasddasdasdasdas</a>
   </div>
 </svelte>
    
