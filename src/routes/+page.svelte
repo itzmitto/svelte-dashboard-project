@@ -12,4 +12,17 @@
     <h1>hallo</h1>
     <p>Welkom op mijn nieuwe dashboard website</p>
   </section>
+
+<aside></aside>
+
+
 </div>
+
+
+<style>
+  aside {
+    background-color:red;
+    padding:2rem;
+    height:2rem;
+  }
+</style>
