@@ -40,6 +40,10 @@
         <div class="card"></div>
         <div class="card"></div>
         <div class="card"></div>
+        <div class="card5">
+          <h1>hallo</h1>
+          <h2>Gemiddeld per categorie</h2>
+        </div>
       </div>
     </div>
   </main>
