@@ -59,14 +59,18 @@ p {
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
+    padding: 20px;
 }
 
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+}
 .card {
-    width: 250px;
-    height: 250px;
-    background-color: var(--lime);
-    border-radius: 1rem;
+  width: 180px;
+  height: 150px;
+  background-color: var(--lime);
+  border-radius: 12px;
 }

@@ -1,7 +1,7 @@
 export const personen: Persoon[] = [
   {
-    id: 1024,
-    naam: "Daan Vermeulen",
+    id: 1,
+    naam: "Armin Arlert",
     leeftijd: 31,
     beroep: "Frontend Developer",
     stad: "Zwolle", 
@@ -14,8 +14,8 @@ export const personen: Persoon[] = [
     avatar_kleur: "#6C9EFF"
   },
   {
-    id: 1025,
-    naam: "Sophie Jansen",
+    id: 2,
+    naam: "Mark Reiss",
     leeftijd: 28,
     beroep: "UX Designer",
     stad: "Amsterdam",
@@ -28,8 +28,8 @@ export const personen: Persoon[] = [
     avatar_kleur: "#FF8FAB"
   },
   { 
-    id: 1026,
-    naam: "Alex Bakker",
+    id: 3,
+    naam: "Zeke Jeager",
     leeftijd: 34,
     beroep: "Data Analyst",
     stad: "Utrecht",
@@ -42,8 +42,8 @@ export const personen: Persoon[] = [
     avatar_kleur: "#5ECFA0"
   },
   {
-    id: 1027,
-    naam: "Eva de Vries",
+    id: 4,
+    naam: "Alex Braun",
     leeftijd: 37,
     beroep: "Marketing Manager",
     stad: "Rotterdam",
