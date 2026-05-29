@@ -4,6 +4,10 @@
     --light: #f3f4f6;
     --bg2: #1e1b43;
     --bg3: ?;
+    --bg-primary: #0f172a;
+    --bg-secondary: #111827;
+    --bg-card: #1e293b;
+    --bg-hover: #334155;
 }
 
 :global(body) {
@@ -25,7 +29,7 @@ p {
 }
 
 .sidebar {
-    width: 250px;
+    width: 200px;
     background-color: var(--bg);
     color: var(--lime);
     padding: 20px;
