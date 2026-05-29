@@ -12,10 +12,11 @@
     <h2>Sidebar</h2>
     <nav>
       <ul>
-        <li><a href="/">Daan Vermeulen</a></li>
-        <li><a href="/">Sophie Jansen</a></li>
-        <li><a href="/">Alex Bakker</a></li>
-        <li><a href="/">Eva de Vries</a></li>
+        <li><a href="/">Dashboard</a></li>
+        <li><a href="/">Armin Arlert</a></li>
+        <li><a href="/">Mark Reiss</a></li>
+        <li><a href="/">Zeke Jeager</a></li>
+        <li><a href="/">Alex Braun</a></li>
       </ul>
     </nav>
   </aside>
