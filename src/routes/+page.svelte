@@ -10,14 +10,24 @@
 <div class="layout">
   <aside class="sidebar">
     <h2>Sidebar</h2>
+
     <nav>
-      <ul>
-        <li><a href="/">Dashboard</a></li>
-        <li><a href="/">Armin Arlert</a></li>
-        <li><a href="/">Mark Reiss</a></li>
-        <li><a href="/">Zeke Jeager</a></li>
-        <li><a href="/">Alex Braun</a></li>
-      </ul>
+      <div class="menu-section">
+        <h3>Overzicht</h3>
+        <ul>
+          <li><a href="/">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="menu-section">
+        <h3>Personen</h3>
+        <ul>
+          <li><a href="/">Armin Arlert</a></li>
+          <li><a href="/">Mark Reiss</a></li>
+          <li><a href="/">Zeke Jeager</a></li>
+          <li><a href="/">Alex Braun</a></li>
+        </ul>
+      </div>
     </nav>
   </aside>
 

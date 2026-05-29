@@ -1,4 +1,4 @@
-export const personen: Persoon[] = [
+export const personen: Persoon[] = [ 
   {
     id: 1,
     naam: "Armin Arlert",

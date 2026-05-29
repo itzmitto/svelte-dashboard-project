@@ -48,8 +48,17 @@ p {
 }
 
 .sidebar a {
+    display: block;
     color: var(--light);
     text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar a:hover {
+    background-color: lightblue;
+    color: var(--bg);
 }
 
 .main {
@@ -63,14 +72,15 @@ p {
 }
 
 .cards {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 
 }
+
 .card {
-  width: 180px;
-  height: 150px;
-  background-color: var(--lime);
-  border-radius: 12px;
+    width: 180px;
+    height: 150px;
+    background-color: var(--lime);
+    border-radius: 12px;
 }
