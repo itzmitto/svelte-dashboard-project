@@ -13,15 +13,17 @@
 
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">Over</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/">Daan Vermeulen</a></li>
+        <li><a href="/">Sophie Jansen</a></li>
+        <li><a href="/">Alex Bakker</a></li>
+        <li><a href="/">Eva de Vries</a></li>
       </ul>
     </nav>
   </aside>
 
   <main class="main">
-    <h1>Welkom</h1>
-    <p>Dit is de main pagina van mijn website</p>
+    <div class="container">
+      <div class="card"></div>
+    </div>
   </main>
 </div>

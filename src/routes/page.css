@@ -7,8 +7,6 @@
 :global(body) {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -48,7 +46,7 @@ p {
 }
 
 .sidebar a {
-    color: white;
+    color: var(--light);
     text-decoration: none;
 }
 
@@ -56,4 +54,16 @@ p {
     flex: 1;
     padding: 40px;
     background-color: var(--light);
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: var(--lime);
+    border-radius: 1rem;
 }
