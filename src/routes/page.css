@@ -2,6 +2,8 @@
     --bg: #1f2937;
     --lime: #a3e635;
     --light: #f3f4f6;
+    --bg2: #1e1b43;
+    --bg3: ?;
 }
 
 :global(body) {
@@ -10,7 +12,7 @@
 }
 
 h1 {
-    color: var(--lime);
+    color: var(--bg2);
 }
 
 p {
@@ -55,10 +57,11 @@ p {
     padding: 40px;
     background-color: var(--light);
 }
+
 .container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .card {

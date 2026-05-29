@@ -10,7 +10,6 @@
 <div class="layout">
   <aside class="sidebar">
     <h2>Sidebar</h2>
-
     <nav>
       <ul>
         <li><a href="/">Daan Vermeulen</a></li>
@@ -23,7 +22,14 @@
 
   <main class="main">
     <div class="container">
-      <div class="card"></div>
+      <h1>Dashboard</h1>
+
+      <div class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
     </div>
   </main>
 </div>
