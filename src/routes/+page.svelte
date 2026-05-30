@@ -20,7 +20,7 @@
       </div>
 
       <div class="menu-section">
-        <h3>Personen</h3>
+        <h3>Personen</h3>   
         <ul>
           <li><a href="/">Armin Arlert</a></li>
           <li><a href="/">Mark Reiss</a></li>
