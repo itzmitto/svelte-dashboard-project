@@ -15,7 +15,7 @@
       <div class="menu-section">
         <h3>Overzicht</h3>
         <ul>
-          <li><a href="/">Dashboard</a></li>
+          <li><a href="/">Dashboard</a></li> 
         </ul>
       </div>
 
