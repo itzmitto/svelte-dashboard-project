@@ -20,7 +20,7 @@ h1 {
 }
 
 p {
-    color: var(--lime);
+    color: var(--bg);
 }
 
 .layout {
@@ -69,10 +69,15 @@ p {
     flex: 1;
     padding: 40px;
     background-color: var(--bg3);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .container {
     padding: 20px;
+    background: white;
+    border-radius: 12px;
 }
 
 .cards {
@@ -87,6 +92,8 @@ p {
     height: 200px;
     background-color: var(--lime);
     border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -94,4 +101,4 @@ p {
     height: 200px;
     background-color: var(--light);
     border-radius: 12px;
-}
+} 
