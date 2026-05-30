@@ -95,5 +95,26 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <h1>Analyse</h1>
+
+      <div class="analyse-cards">
+        <div class="maincard">
+          <h2>Salaris vs Uitgaven per persoon</h2>
+          <p>Salaris</p>
+          <p>Uitgaven</p>
+          <p>Over</p>
+        </div>
+
+        <div class="maincard2">
+          <h2>Uitgaven totaal</h2>
+          <p>Huur €3.700</p>
+          <p>Eten €1.460</p>
+          <p>Abonnementen €365</p>
+          <p>Transport €2.430</p>
+        </div>
+      </div>
+    </div>
   </main>
 </div>
