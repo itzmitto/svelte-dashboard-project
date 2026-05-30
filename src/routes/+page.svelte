@@ -15,12 +15,12 @@
       <div class="menu-section">
         <h3>Overzicht</h3>
         <ul>
-          <li><a href="/">Dashboard</a></li> 
+          <li><a href="/">Dashboard</a></li>
         </ul>
       </div>
 
       <div class="menu-section">
-        <h3>Personen</h3>   
+        <h3>Personen</h3>
         <ul>
           <li><a href="/">Armin Arlert</a></li>
           <li><a href="/">Mark Reiss</a></li>
@@ -36,13 +36,25 @@
       <h1>Dashboard</h1>
 
       <div class="cards">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card5">
-          <h1>hallo</h1>
-          <h2>Gemiddeld per categorie</h2>
+        <div class="card1">
+          <h1>Totaal salaris</h1>
+          <h2>€ 14.800</h2>
+          <h3>4 personen gecombineerd</h3>
+        </div>
+        <div class="card">
+          <h1>Totaal uitgaven</h1>
+          <h2>€ 9.640</h2>
+          <h3>65.1% van salaris</h3>
+        </div>
+        <div class="card">
+          <h1>Netto over</h1>
+          <h2>€ 5.160</h2>
+          <h3>34.9% spaarquote</h3>
+        </div>
+        <div class="card">
+          <h1>Gem. per persoon</h1>
+          <h2>€ 1.290</h2>
+          <h3>netto beschikbaar</h3>
         </div>
       </div>
     </div>
