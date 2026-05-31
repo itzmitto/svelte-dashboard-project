@@ -44,10 +44,12 @@ p {
 .sidebar ul {
     list-style: none;
     padding: 0;
+    text-decoration: none;
 }
 
 .sidebar li {
     margin-bottom: 10px;
+    text-decoration: none;
     list-style: none;
 }
 
@@ -84,6 +86,7 @@ p {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+
 }
 
 .card1 {
@@ -104,22 +107,6 @@ p {
     box-shadow: 0 1px 4px var(--shadow-color);
 }
 
-.analyse-cards {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-}
-
-.maincard {
-    width: 550px;
-    background-color: var(--light);
-    border-radius: 12px;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid var(--border);
-    box-shadow: 0 1px 4px var(--shadow-color);
-}
-
 .maincard2 {
     width: 300px;
     height: 300px;
@@ -127,6 +114,24 @@ p {
     border-radius: 12px;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.analyse-cards {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+
+
+.maincard {
+    background-color: var(--light);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 4px var(--shadow-color);
+    width: 550px;
 }
 
 .maincard-title {
@@ -159,21 +164,7 @@ p {
     flex-shrink: 0;
 }
 
-.legend-inkomen {
-    background-color: #a3e635;
-}
-
-.legend-uitgaven {
-    background-color: #0f172a;
-}
-
-.legend-over {
-    background-color: #22c55e;
-}
-
 .maincard-chart {
     position: relative;
     height: 220px;
 }
-
-
