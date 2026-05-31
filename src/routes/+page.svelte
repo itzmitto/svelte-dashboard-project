@@ -3,73 +3,59 @@
   import { personen } from '$lib/data/personen';
   import "./page.css";
 
-  onMount(() => {
-    import('chart.js/auto').then(({ default: Chart }) => {
-      const ctx = document.getElementById('salaryChart');
+  onMount(async () => {
+    const { default: Chart } = await import('chart.js/auto');
 
-      const labels = personen.map(p => p.naam.split(' ')[0]);
-      const salaris = personen.map(p => p.maandelijks_inkomen);
-      const uitgaven = personen.map(p => Object.values(p.maandelijkse_kosten).reduce((a, b) => a + b, 0));
-      const over = personen.map((p, i) => salaris[i] - uitgaven[i]);
-
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [
-            {
-              label: 'Inkomen',
-              data: salaris,
-              backgroundColor: '#a3e635',
-              borderRadius: 5,
-              borderSkipped: false
+    new Chart(document.getElementById('salaryChart'), {
+      type: 'bar',
+      data: {
+        labels: personen.map(p => p.naam.split(' ')[0]),
+        datasets: [
+          {
+            label: 'Inkomen',
+            data: personen.map(p => p.maandelijks_inkomen),
+            backgroundColor: '#a3e635',
+            borderRadius: 5,
+            borderSkipped: false
+          },
+          {
+            label: 'Uitgaven',
+            data: personen.map(p => Object.values(p.maandelijkse_kosten).reduce((a, b) => a + b, 0)),
+            backgroundColor: '#0f172a',
+            borderRadius: 5,
+            borderSkipped: false
+          },
+          {
+            label: 'Over',
+            data: personen.map(p => p.maandelijks_inkomen - Object.values(p.maandelijkse_kosten).reduce((a, b) => a + b, 0)),
+            backgroundColor: '#22c55e',
+            borderRadius: 5,
+            borderSkipped: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: {
+            ticks: { color: '#94a3b8' },
+            grid: { color: 'rgba(15,23,42,0.06)' },
+            border: { color: 'transparent' }
+          },
+          y: {
+            ticks: {
+              color: '#94a3b8',
+              callback: v => '€' + v.toLocaleString('nl-NL')
             },
-            {
-              label: 'Uitgaven',
-              data: uitgaven,
-              backgroundColor: '#0f172a',
-              borderRadius: 5,
-              borderSkipped: false
-            },
-            {
-              label: 'Over',
-              data: over,
-              backgroundColor: '#22c55e',
-              borderRadius: 5,
-              borderSkipped: false
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: { legend: { display: false } },
-          scales: {
-            x: {
-              ticks: { color: '#94a3b8', font: { size: 12, weight: '600' } },
-              grid: { color: 'rgba(15,23,42,0.06)' },
-              border: { color: 'transparent' }
-            },
-            y: {
-              ticks: {
-                color: '#94a3b8',
-                font: { size: 11 },
-                callback: v => '€' + v.toLocaleString('nl-NL')
-              },
-              grid: { color: 'rgba(15,23,42,0.06)' },
-              border: { color: 'transparent' }
-            }
+            grid: { color: 'rgba(15,23,42,0.06)' },
+            border: { color: 'transparent' }
           }
         }
-      });
+      }
     });
   });
-
-  const totaalInkomen = personen.reduce((sum, p) => sum + p.maandelijks_inkomen, 0);
-  const totaalUitgaven = personen.reduce((sum, p) =>
-    sum + Object.values(p.maandelijkse_kosten).reduce((a, b) => a + b, 0), 0);
-  const totaalOver = totaalInkomen - totaalUitgaven;
-  const gemPerPersoon = Math.round(totaalOver / personen.length);
 </script>
 
 <svelte:head>
@@ -92,9 +78,10 @@
       <div class="menu-section">
         <h3>Personen</h3>
         <ul>
-          {#each personen as persoon}
-            <li><a href="/">{persoon.naam}</a></li>
-          {/each}
+          <li><a href="/">Armin Arlert</a></li>
+          <li><a href="/">Mark Reiss</a></li>
+          <li><a href="/">Zeke Jeager</a></li>
+          <li><a href="/">Alex Braun</a></li>
         </ul>
       </div>
     </nav>
@@ -107,25 +94,25 @@
       <div class="cards">
         <div class="card1">
           <h1>Totaal salaris</h1>
-          <h2>€ {totaalInkomen.toLocaleString('nl-NL')}</h2>
-          <h3>{personen.length} personen gecombineerd</h3>
+          <h2>€ 14.800</h2>
+          <h3>4 personen gecombineerd</h3>
         </div>
 
         <div class="card">
           <h1>Totaal uitgaven</h1>
-          <h2>€ {totaalUitgaven.toLocaleString('nl-NL')}</h2>
-          <h3>{Math.round(totaalUitgaven / totaalInkomen * 100)}% van salaris</h3>
+          <h2>€ 9.640</h2>
+          <h3>65.1% van salaris</h3>
         </div>
 
         <div class="card">
           <h1>Netto over</h1>
-          <h2>€ {totaalOver.toLocaleString('nl-NL')}</h2>
-          <h3>{Math.round(totaalOver / totaalInkomen * 100)}% spaarquote</h3>
+          <h2>€ 5.160</h2>
+          <h3>34.9% spaarquote</h3>
         </div>
 
         <div class="card">
           <h1>Gem. per persoon</h1>
-          <h2>€ {gemPerPersoon.toLocaleString('nl-NL')}</h2>
+          <h2>€ 1.290</h2>
           <h3>netto beschikbaar</h3>
         </div>
       </div>
@@ -135,16 +122,33 @@
       <h1>Personen</h1>
 
       <div class="cards">
-        {#each personen as persoon}
-          {@const uitgaven = Object.values(persoon.maandelijkse_kosten).reduce((a, b) => a + b, 0)}
-          {@const over = persoon.maandelijks_inkomen - uitgaven}
-          <div class="card">
-            <h2>{persoon.naam}</h2>
-            <p>Salaris: € {persoon.maandelijks_inkomen.toLocaleString('nl-NL')}</p>
-            <p>Uitgaven: € {uitgaven.toLocaleString('nl-NL')}</p>
-            <p>Over: € {over.toLocaleString('nl-NL')}</p>
-          </div>
-        {/each}
+        <div class="card">
+          <h2>Armin Arlert</h2>
+          <p>Salaris: € 3.800</p>
+          <p>Uitgaven: € 2.400</p>
+          <p>Over: € 1.400</p>
+        </div>
+
+        <div class="card">
+          <h2>Mark Reiss</h2>
+          <p>Salaris: € 3.600</p>
+          <p>Uitgaven: € 2.100</p>
+          <p>Over: € 1.500</p>
+        </div>
+
+        <div class="card">
+          <h2>Zeke Jeager</h2>
+          <p>Salaris: € 4.100</p>
+          <p>Uitgaven: € 2.800</p>
+          <p>Over: € 1.300</p>
+        </div>
+
+        <div class="card">
+          <h2>Alex Braun</h2>
+          <p>Salaris: € 3.300</p>
+          <p>Uitgaven: € 2.340</p>
+          <p>Over: € 960</p>
+        </div>
       </div>
     </div>
 
@@ -156,13 +160,13 @@
           <h2 class="maincard-title">Salaris vs Uitgaven per persoon</h2>
           <div class="maincard-legend">
             <span class="legend-item">
-              <span class="legend-dot" style="background:#a3e635"></span>Inkomen
+              <span class="legend-dot legend-inkomen"></span>Inkomen
             </span>
             <span class="legend-item">
-              <span class="legend-dot" style="background:#0f172a"></span>Uitgaven
+              <span class="legend-dot legend-uitgaven"></span>Uitgaven
             </span>
             <span class="legend-item">
-              <span class="legend-dot" style="background:#22c55e"></span>Over
+              <span class="legend-dot legend-over"></span>Over
             </span>
           </div>
           <div class="maincard-chart">
@@ -172,10 +176,10 @@
 
         <div class="maincard2">
           <h2>Uitgaven totaal</h2>
-          {#each ['huur','boodschappen','transport','abonnementen','overig'] as cat}
-            {@const totaal = personen.reduce((sum, p) => sum + p.maandelijkse_kosten[cat], 0)}
-            <p>{cat.charAt(0).toUpperCase() + cat.slice(1)}: € {totaal.toLocaleString('nl-NL')}</p>
-          {/each}
+          <p>Huur €3.700</p>
+          <p>Eten €1.460</p>
+          <p>Abonnementen €365</p>
+          <p>Transport €2.430</p>
         </div>
       </div>
     </div>
