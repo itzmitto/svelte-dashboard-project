@@ -1,0 +1,62 @@
+.maincard {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1.75rem 1.75rem 1.25rem;
+    width: 100%;
+    max-width: 660px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.maincard h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+}
+
+.maincard p {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 1.25rem;
+}
+
+.legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #555;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.legend-dot.salaris {
+    background: #aaee44;
+}
+
+.legend-dot.uitgaven {
+    background: #1a1a2e;
+}
+
+.legend-dot.netto {
+    background: #22aa77;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
