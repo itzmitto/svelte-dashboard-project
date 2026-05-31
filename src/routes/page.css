@@ -130,3 +130,50 @@ p {
     gap: 1rem;
     align-items: flex-start;
 }
+
+
+
+.maincard {
+    background-color: var(--light);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 4px var(--shadow-color);
+    width: 550px;
+}
+
+.maincard-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bg2);
+    margin: 0 0 12px 0;
+}
+
+.maincard-legend {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.maincard-chart {
+    position: relative;
+    height: 220px;
+}
