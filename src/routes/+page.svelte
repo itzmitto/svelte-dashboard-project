@@ -1,61 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-  import { personen } from '$lib/data/personen';
   import "./page.css";
-
-  onMount(async () => {
-    const { default: Chart } = await import('chart.js/auto');
-
-    new Chart(document.getElementById('salaryChart'), {
-      type: 'bar',
-      data: {
-        labels: personen.map(p => p.naam.split(' ')[0]),
-        datasets: [
-          {
-            label: 'Inkomen',
-            data: personen.map(p => p.maandelijks_inkomen),
-            backgroundColor: '#a3e635',
-            borderRadius: 5,
-            borderSkipped: false
-          },
-          {
-            label: 'Uitgaven',
-            data: personen.map(p => Object.values(p.maandelijkse_kosten).reduce((a, b) => a + b, 0)),
-            backgroundColor: '#0f172a',
-            borderRadius: 5,
-            borderSkipped: false
-          },
-          {
-            label: 'Over',
-            data: personen.map(p => p.maandelijks_inkomen - Object.values(p.maandelijkse_kosten).reduce((a, b) => a + b, 0)),
-            backgroundColor: '#22c55e',
-            borderRadius: 5,
-            borderSkipped: false
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: {
-            ticks: { color: '#94a3b8' },
-            grid: { color: 'rgba(15,23,42,0.06)' },
-            border: { color: 'transparent' }
-          },
-          y: {
-            ticks: {
-              color: '#94a3b8',
-              callback: v => '€' + v.toLocaleString('nl-NL')
-            },
-            grid: { color: 'rgba(15,23,42,0.06)' },
-            border: { color: 'transparent' }
-          }
-        }
-      }
-    });
-  });
 </script>
 
 <svelte:head>
@@ -157,21 +101,10 @@
 
       <div class="analyse-cards">
         <div class="maincard">
-          <h2 class="maincard-title">Salaris vs Uitgaven per persoon</h2>
-          <div class="maincard-legend">
-            <span class="legend-item">
-              <span class="legend-dot legend-inkomen"></span>Inkomen
-            </span>
-            <span class="legend-item">
-              <span class="legend-dot legend-uitgaven"></span>Uitgaven
-            </span>
-            <span class="legend-item">
-              <span class="legend-dot legend-over"></span>Over
-            </span>
-          </div>
-          <div class="maincard-chart">
-            <canvas id="salaryChart"></canvas>
-          </div>
+          <h2>Salaris vs Uitgaven per persoon</h2>
+          <p>Salaris</p>
+          <p>Uitgaven</p>
+          <p>Over</p>
         </div>
 
         <div class="maincard2">
