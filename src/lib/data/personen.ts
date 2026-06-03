@@ -56,4 +56,4 @@ export const personen: Persoon[] = [
   }
 ];
 
-export const geselecteerdePersoon = writable<Persoon>(personen[0]);
+export const geselecteerdePersoon = writable<Persoon>(personen[0]); 

@@ -13,15 +13,6 @@
     border-radius: 12px;
 }
 
-.maincard2 {
-    background-color: #ffffff;
-    padding: 28px;
-    box-shadow: 0 2px 8px var(--shadow);
-    border: 1px solid var(--shadow);
-    border-radius: 12px;
-    flex: 1;
-}
-
 .chart-title {
     font-size: 16px;
     font-weight: 700;
@@ -135,4 +126,4 @@
 
 .netto-bar {
     background-color: var(--netto);
-}
+} 

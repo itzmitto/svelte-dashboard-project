@@ -2,6 +2,7 @@
   import "./page.css";
   import "./maincard.css";
   import "./animation.css";
+  import "./maincard2.css";
 </script>
 
 <svelte:head>
