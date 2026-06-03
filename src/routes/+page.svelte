@@ -1,6 +1,7 @@
 <script>
   import "./page.css";
   import "./maincard.css";
+  import "./animation.css";
 </script>
 
 <svelte:head>
