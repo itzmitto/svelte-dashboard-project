@@ -17,7 +17,7 @@ export const personen: Persoon[] = [
   },
   {
     id: 2,
-    naam: "Mark Reiss",
+    naam: "Mark Reiss", 
     leeftijd: 28,
     beroep: "UX Designer",
     stad: "Amsterdam",

@@ -10,6 +10,12 @@
     --bg-hover: #334155;
     --border: #E2E8F0;
     --shadow-color: rgba(15, 23, 42, 0.08);
+    --shadow: #d0d0d0;
+    --salaris: #c6f135;
+    --uitgaven: #1a1a2e;
+    --netto: #2ecc71;
+    --grid: #e8e8e8;
+    --text-muted: #999;
 }
 
 :global(body) {
@@ -21,7 +27,7 @@ h1 {
     color: var(--bg2);
 }
 
-p {
+p { 
     color: var(--bg);
 }
 
