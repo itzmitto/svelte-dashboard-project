@@ -10,7 +10,7 @@
 
 <div class="layout">
   <aside class="sidebar">
-    <h2>Sidebar</h2>
+    <h2>svelte-project </h2>
 
     <nav>
       <div class="menu-section">
@@ -114,7 +114,7 @@
             <span class="legend-item"
               ><span class="dot netto"></span> Netto</span
             >
-          </div>
+          </div> 
 
           <div class="chart-area">
             <div class="y-axis">
@@ -146,28 +146,28 @@
                 <div class="bar salaris-bar" style="height: 90.9%;"></div>
                 <div class="bar uitgaven-bar" style="height: 57.8%;"></div>
                 <div class="bar netto-bar" style="height: 33.3%;"></div>
-                <p class="x-label">Lars</p>
+                <p class="x-label">Armin Arlert</p>
               </div>
 
               <div class="group">
                 <div class="bar salaris-bar" style="height: 77.8%;"></div>
                 <div class="bar uitgaven-bar" style="height: 55.6%;"></div>
                 <div class="bar netto-bar" style="height: 22.2%;"></div>
-                <p class="x-label">Sara</p>
+                <p class="x-label">Mark Reiss</p>
               </div>
 
               <div class="group">
                 <div class="bar salaris-bar" style="height: 82.2%;"></div>
                 <div class="bar uitgaven-bar" style="height: 53.3%;"></div>
                 <div class="bar netto-bar" style="height: 31.1%;"></div>
-                <p class="x-label">Max</p>
+                <p class="x-label">Zeke Jeager</p>
               </div>
 
               <div class="group">
                 <div class="bar salaris-bar" style="height: 68.9%;"></div>
                 <div class="bar uitgaven-bar" style="height: 42.2%;"></div>
                 <div class="bar netto-bar" style="height: 26.7%;"></div>
-                <p class="x-label">Nina</p>
+                <p class="x-label">Alex Braun</p>
               </div>
             </div>
           </div>
