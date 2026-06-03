@@ -1,4 +1,51 @@
 .maincard2 {
+  background: var(--light);
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.maincard2 h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.legend-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.leg-item strong {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-left: auto;
+}
+
+.leg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.canvas-wrap {
+  position: relative;
+  height: 180px;
+}
+
+/* .maincard2 {
     width: 300px;
     height: 300px;
     background-color: var(--light);
@@ -13,4 +60,4 @@
     border: 1px solid var(--shadow);
     border-radius: 12px;
     flex: 1;
-}
+} */
