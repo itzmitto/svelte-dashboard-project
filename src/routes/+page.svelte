@@ -4,6 +4,7 @@
   import "./maincard.css";
   import "./animation.css";
   import "./maincard2.css";
+  import "./trend-card.css";
 
   const CATS = ["Huur", "Eten", "Abonnementen", "Transport"];
   const COLS = ["#0F172A", "#A3E635", "#38BDF8", "#F59E0B"];
@@ -231,7 +232,15 @@
             <canvas bind:this={canvas}></canvas>
           </div>
         </div>
+
+        
+        </div>
       </div>
+      <div class="container">
+          <div class="trend-card">
+            <h1>Trends</h1>
+          </div>
     </div>
+    
   </main>
 </div>
