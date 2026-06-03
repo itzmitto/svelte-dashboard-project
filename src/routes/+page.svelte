@@ -1,8 +1,47 @@
 <script>
+  import { onMount } from "svelte";
   import "./page.css";
   import "./maincard.css";
   import "./animation.css";
   import "./maincard2.css";
+
+  const CATS = ["Huur", "Eten", "Abonnementen", "Transport"];
+  const COLS = ["#0F172A", "#A3E635", "#38BDF8", "#F59E0B"];
+  const VALS = [3700, 1460, 365, 2430];
+
+  let canvas;
+
+  onMount(() => {
+    new Chart(canvas, {
+      type: "doughnut",
+      data: {
+        labels: CATS,
+        datasets: [
+          {
+            data: VALS,
+            backgroundColor: COLS,
+            borderWidth: 2,
+            borderColor: "#fff",
+            hoverOffset: 5,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "62%",
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (ctx) =>
+                ` ${ctx.label}: €${ctx.parsed.toLocaleString("nl-NL")}`,
+            },
+          },
+        },
+      },
+    });
+  });
 </script>
 
 <svelte:head>
@@ -12,7 +51,7 @@
 
 <div class="layout">
   <aside class="sidebar">
-    <h2>svelte-project </h2>
+    <h2>svelte-project</h2>
 
     <nav>
       <div class="menu-section">
@@ -116,7 +155,7 @@
             <span class="legend-item"
               ><span class="dot netto"></span> Netto</span
             >
-          </div> 
+          </div>
 
           <div class="chart-area">
             <div class="y-axis">
@@ -177,10 +216,20 @@
 
         <div class="maincard2">
           <h2>Uitgaven totaal</h2>
-          <p>Huur €3.700</p>
-          <p>Eten €1.460</p>
-          <p>Abonnementen €365</p>
-          <p>Transport €2.430</p>
+
+          <div class="legend-col">
+            {#each CATS as cat, i}
+              <span class="leg-item">
+                <span class="leg-dot" style="background: {COLS[i]}"></span>
+                {cat}
+                <strong>€{VALS[i].toLocaleString("nl-NL")}</strong>
+              </span>
+            {/each}
+          </div>
+
+          <div class="canvas-wrap">
+            <canvas bind:this={canvas}></canvas>
+          </div>
         </div>
       </div>
     </div>
