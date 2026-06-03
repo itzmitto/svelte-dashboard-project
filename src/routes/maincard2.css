@@ -1,6 +1,9 @@
 .maincard2 {
-  background: var(--light);
-  padding: 1.25rem;
+  background-color: var(--light);
+  width: 500px;
+  padding: 30px 30px 133px 30px;
+  box-shadow: 0 2px 8px var(--shadow);
+  border: 1px solid var(--shadow);
   border-radius: 12px;
 }
 

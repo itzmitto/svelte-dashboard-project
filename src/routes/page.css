@@ -79,7 +79,7 @@ p {
     background-color: var(--bg3);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 5px;
 }
 
 .container {
