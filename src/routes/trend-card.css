@@ -1,0 +1,71 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.trends-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary, #0F172A);
+}
+
+.section-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted, #94A3B8);
+}
+
+.trend-card {
+    background: var(--surface, #FFFFFF);
+    border: 1px solid var(--border, #E2E8F0);
+    border-radius: var(--radius, 12px);
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px var(--shadow-color, rgba(15, 23, 42, 0.08));
+}
+
+.chart-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chart-title-trend {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary, #0F172A);
+}
+
+.legend-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.leg-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--text-secondary, #64748B);
+    font-weight: 600;
+}
+
+.leg-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    background: var(--primary, #A3E635);
+}
+
+.chart-wrap {
+    position: relative;
+    height: 160px;
+}

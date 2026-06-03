@@ -11,6 +11,7 @@
   const VALS = [3700, 1460, 365, 2430];
 
   let canvas;
+  let trendCanvas;
 
   onMount(() => {
     new Chart(canvas, {
@@ -38,6 +39,65 @@
               label: (ctx) =>
                 ` ${ctx.label}: €${ctx.parsed.toLocaleString("nl-NL")}`,
             },
+          },
+        },
+      },
+    });
+
+    const COLORS = {
+      green: "#A3E635",
+      muted: "#94A3B8",
+      grid: "rgba(15,23,42,0.06)",
+    };
+
+    new Chart(trendCanvas, {
+      type: "line",
+      data: {
+        labels: ["Dec", "Jan", "Feb", "Mrt", "Apr", "Mei"],
+        datasets: [
+          {
+            label: "Netto",
+            data: [4800, 4950, 5020, 4780, 5100, 5160],
+            borderColor: COLORS.green,
+            backgroundColor: "rgba(163,230,53,0.1)",
+            fill: true,
+            tension: 0.4,
+            pointBackgroundColor: COLORS.green,
+            pointRadius: 4,
+            pointHoverRadius: 6,
+            borderWidth: 2.5,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => ` €${ctx.parsed.y.toLocaleString("nl-NL")}`,
+            },
+          },
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: COLORS.muted,
+              font: { family: "Plus Jakarta Sans", size: 12 },
+            },
+            grid: { color: COLORS.grid },
+            border: { color: "transparent" },
+          },
+          y: {
+            min: 4500,
+            ticks: {
+              color: COLORS.muted,
+              font: { family: "Plus Jakarta Sans", size: 11 },
+              callback: (v) => "€" + v.toLocaleString("nl-NL"),
+            },
+            grid: { color: COLORS.grid },
+            border: { color: "transparent" },
           },
         },
       },
@@ -232,15 +292,31 @@
             <canvas bind:this={canvas}></canvas>
           </div>
         </div>
+      </div>
+    </div>
 
-        
+    <div class="container">
+      <div class="section-header">
+        <h2 class="trends-heading">Netto trend</h2>
+        <span class="section-tag">6 maanden</span>
+      </div>
+
+      <div class="trend-card">
+        <div class="chart-card-header">
+          <span class="chart-title-trend"
+            >Gecombineerd netto overschot per maand</span
+          >
+          <div class="legend-row">
+            <span class="leg-item">
+              <span class="leg-dot"></span>
+              Netto
+            </span>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas bind:this={trendCanvas}></canvas>
         </div>
       </div>
-      <div class="container">
-          <div class="trend-card">
-            <h1>Trends</h1>
-          </div>
     </div>
-    
   </main>
 </div>
